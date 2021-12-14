@@ -22,7 +22,7 @@ Route::get('/', function () {
 Route::get('/', 'StaticPagesController@home')->name('home');
 Route::get('/help', 'StaticPagesController@help')->name('help');
 Route::get('/about', 'StaticPagesController@about')->name('about');
-Route::get('/login','StaticPagesController@login')->name('login');
+
 
 Route::get('signup', 'UsersController@create')->name('signup');
 Route::resource('users', 'UsersController');
