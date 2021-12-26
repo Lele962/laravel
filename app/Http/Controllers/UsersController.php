@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Auth;
-
+use Mail;
 class UsersController extends Controller
 {
     public function __construct()
