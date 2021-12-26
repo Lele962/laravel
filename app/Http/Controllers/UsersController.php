@@ -24,7 +24,7 @@ class UsersController extends Controller
         $users = User::all();
         return view('users.index', compact('users'));
     }
-    
+
     public function create()
     {
         return view('users.create');
@@ -78,6 +78,13 @@ class UsersController extends Controller
         session()->flash('success', '个人资料更新成功！');
 
         return redirect()->route('users.show', $user);
+    }
+    public function destroy(User $user)
+    {
+        $this->authorize('destroy', $user);
+        $user->delete();
+        session()->flash('success', '成功删除用户！');
+        return back();
     }
 
 }
