@@ -1,7 +1,5 @@
 <footer class="footer">
-  
-  
-    刻意练习，每日精进
+    Yeort
   </a>
 
   <div class="float-right">
